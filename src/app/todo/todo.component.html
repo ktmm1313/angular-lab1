@@ -1,1 +1,27 @@
-<p>todo works!</p>
+<section class="todos">
+  <h2>TODO List</h2>
+  <p>A place to store your to-dos</p>
+  <input
+    type="text"
+    id="filter"
+    [(ngModel)]="filter"
+    placeholder="Filter your to-dos"
+  />
+  <ol class="todoList">
+    <app-todo-task
+      [todo]="todo"
+      (deleted)="removeTask($event)"
+      (added)="addTask($event)"
+      *ngFor="let todo of getFilterResults(); let id = index"
+    ></app-todo-task>
+  </ol>
+
+  <input
+    type="text"
+    id="addTodo"
+    [(ngModel)]="task"
+    placeholder="Add your to-do"
+  />
+
+  <button class="add" (click)="addTask()">Add</button>
+</section>

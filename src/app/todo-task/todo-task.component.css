@@ -1,0 +1,16 @@
+.complete {
+    color: #ff69b4;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ff69b4;
+}
+.remove {
+    background-color: #fff;
+    border: none;
+    float: right;
+}
+.strikethrough {
+    text-decoration: line-through;
+}
+
+

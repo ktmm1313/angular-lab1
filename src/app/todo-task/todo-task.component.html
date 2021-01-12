@@ -1,0 +1,13 @@
+<li>
+  <button
+    class="complete"
+    *ngIf="!todo.completed"
+    (click)="completeTask($event)"
+  >
+    Complete
+  </button>
+  <span [ngClass]="!this.todo.completed ? 'null' : 'strikethrough'">
+    {{ todo.task }}
+  </span>
+  <button class="remove" (click)="deleteTodo()">X</button>
+</li>
